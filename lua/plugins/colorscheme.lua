@@ -1,78 +1,48 @@
 return {
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
+    "olimorris/onedarkpro.nvim",
+    name = "onedarkpro",
     priority = 1000,
-    opts = {
-      flavour = "mocha",
-      background = {
-        light = "latte",
-        dark = "mocha",
-      },
-      transparent_background = true,
-      custom_highlights = function(colors)
-        return {
-          -- Floating windows transparent
-          NormalFloat = { bg = "NONE" },
-          FloatBorder = { bg = "NONE" },
-          FloatTitle = { bg = "NONE" },
-          -- Telescope transparent
-          TelescopeNormal = { bg = "NONE" },
-          TelescopeBorder = { bg = "NONE" },
-          TelescopePromptNormal = { bg = "NONE" },
-          TelescopePromptBorder = { bg = "NONE" },
-          TelescopeResultsNormal = { bg = "NONE" },
-          TelescopeResultsBorder = { bg = "NONE" },
-          TelescopePreviewNormal = { bg = "NONE" },
-          TelescopePreviewBorder = { bg = "NONE" },
-          -- Sidebar / tree transparent
-          NeoTreeNormal = { bg = "NONE" },
-          NeoTreeNormalNC = { bg = "NONE" },
-          -- Whichkey
-          WhichKeyFloat = { bg = "NONE" },
-          -- Notify
-          NotifyBackground = { bg = colors.base },
-          -- Pmenu (completion)
-          Pmenu = { bg = "NONE" },
-          PmenuSel = { bg = colors.surface0 },
-        }
-      end,
-      integrations = {
-        aerial = true,
-        cmp = true,
-        dap = true,
-        dap_ui = true,
-        dashboard = true,
-        flash = true,
-        gitsigns = true,
-        indent_blankline = { enabled = true },
-        lsp_trouble = true,
-        mason = true,
-        mini = true,
-        native_lsp = {
-          enabled = true,
-          underlines = {
-            errors = { "undercurl" },
-            hints = { "undercurl" },
-            warnings = { "undercurl" },
-            information = { "undercurl" },
+    config = function()
+      require("onedarkpro").setup({
+        colors = {
+          onedark_vivid = {
+            green = "#4090d0",
+            bg = "#000000",
           },
         },
-        neogit = true,
-        neotest = true,
-        noice = true,
-        notify = true,
-        semantic_tokens = true,
-        telescope = { enabled = true },
-        treesitter = true,
-        which_key = true,
-      },
-    },
+        options = {
+          transparent = false,
+          terminal_colors = true,
+          lualine_transparency = false,
+        },
+        highlights = {
+          Normal = { bg = "#000000" },
+          NormalNC = { bg = "#000000" },
+          -- Floating windows
+          NormalFloat = { bg = "none" },
+          FloatBorder = { bg = "none" },
+          FloatTitle = { bg = "none" },
+          -- Telescope
+          TelescopeNormal = { bg = "none" },
+          TelescopeBorder = { bg = "none" },
+          TelescopePromptNormal = { bg = "none" },
+          TelescopePromptBorder = { bg = "none" },
+          TelescopeResultsNormal = { bg = "none" },
+          TelescopeResultsBorder = { bg = "none" },
+          TelescopePreviewNormal = { bg = "none" },
+          TelescopePreviewBorder = { bg = "none" },
+          -- Whichkey
+          WhichKeyFloat = { bg = "none" },
+        },
+      })
+      vim.cmd("colorscheme onedark_vivid")
+    end,
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "onedark_vivid",
     },
   },
 }

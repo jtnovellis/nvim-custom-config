@@ -9,6 +9,17 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
 })
 
+-- Auto-reload files changed outside of nvim
+vim.opt.autoread = true
+vim.api.nvim_create_autocmd({ "FocusGained", "BufEnter", "CursorHold", "CursorHoldI" }, {
+  group = vim.api.nvim_create_augroup("auto_reload", { clear = true }),
+  callback = function()
+    if vim.fn.mode() ~= "c" then
+      vim.cmd("checktime")
+    end
+  end,
+})
+
 -- Remove trailing whitespace on save
 vim.api.nvim_create_autocmd("BufWritePre", {
   group = vim.api.nvim_create_augroup("trim_whitespace", { clear = true }),

@@ -565,6 +565,7 @@ Add, delete, or replace surrounding pairs (quotes, brackets, tags).
 | `<leader>sc` | Command history |
 | `<leader>sa` | Autocmds |
 | `<leader>si` | Icons picker |
+| `<leader>st` | Search TODOs |
 
 ---
 
@@ -578,13 +579,10 @@ Add, delete, or replace surrounding pairs (quotes, brackets, tags).
 | `[h` | Previous hunk |
 | `<leader>ghs` | Stage hunk |
 | `<leader>ghr` | Reset hunk |
-| `<leader>ghS` | Stage buffer |
-| `<leader>ghR` | Reset buffer |
 | `<leader>ghp` | Preview hunk |
-| `<leader>ghb` | Blame line |
+| `<leader>ghb` | Blame line (full) |
 | `<leader>ghd` | Diff this |
-| `<leader>ghD` | Diff this (against ~) |
-| `<leader>ub` | Toggle blame line |
+| `<leader>ub` | Toggle inline blame |
 
 ### Neogit & Git Tools
 
@@ -801,10 +799,12 @@ The venv selector auto-detects `.venv`, `venv`, conda, poetry, and pyenv environ
 |-----|--------|
 | `<leader>xx` | Diagnostics (Trouble) |
 | `<leader>xX` | Buffer diagnostics (Trouble) |
+| `<leader>xs` | Symbols (Trouble) |
+| `<leader>xl` | LSP references/definitions (Trouble) |
 | `<leader>xL` | Location list (Trouble) |
-| `<leader>xQ` | Quickfix list (Trouble) |
-| `<leader>xt` | Todo comments |
-| `<leader>xT` | Todo/Fix/Fixme |
+| `<leader>xq` | Quickfix list (Trouble) |
+| `<leader>xt` | TODOs (Trouble) |
+| `<leader>st` | Search TODOs (Telescope) |
 | `[q` | Previous quickfix item |
 | `]q` | Next quickfix item |
 | `[d` | Previous diagnostic |
