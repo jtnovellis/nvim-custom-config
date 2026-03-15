@@ -22,13 +22,21 @@ return {
     event = "BufReadPre",
     opts = {
       signs = {
+        add          = { text = "▎", hl = "GitSignsAdd" },
+        change       = { text = "▎", hl = "GitSignsChange" },
+        delete       = { text = "", hl = "GitSignsDelete" },
+        topdelete    = { text = "", hl = "GitSignsDelete" },
+        changedelete = { text = "▎", hl = "GitSignsChangeDelete" },
+        untracked    = { text = "▎", hl = "GitSignsUntracked" },
+      },
+      signs_staged = {
         add          = { text = "▎" },
         change       = { text = "▎" },
         delete       = { text = "" },
         topdelete    = { text = "" },
         changedelete = { text = "▎" },
-        untracked    = { text = "▎" },
       },
+      signs_staged_enable = true,
       current_line_blame = true,
       current_line_blame_opts = {
         delay = 500,

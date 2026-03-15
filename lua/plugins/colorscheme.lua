@@ -77,6 +77,27 @@ return {
           ["@punctuation.bracket"]   = { fg = "#aaaaaa" },
           ["@punctuation.delimiter"] = { fg = "#aaaaaa" },
 
+          -- Git signs (gutter)
+          GitSignsAdd            = { fg = "#00e676", bold = true },  -- bright green
+          GitSignsChange         = { fg = "#ffd700", bold = true },  -- gold
+          GitSignsDelete         = { fg = "#ff5f87", bold = true },  -- red-pink
+          GitSignsChangeDelete   = { fg = "#ff9d00", bold = true },  -- orange
+          GitSignsUntracked      = { fg = "#7eb3f7" },               -- sky blue
+          GitSignsAddNr          = { fg = "#00e676" },
+          GitSignsChangeNr       = { fg = "#ffd700" },
+          GitSignsDeleteNr       = { fg = "#ff5f87" },
+          -- Staged signs (slightly dimmer to distinguish from unstaged)
+          GitSignsAddStaged      = { fg = "#00a050", bold = true },
+          GitSignsChangeStaged   = { fg = "#b89a00", bold = true },
+          GitSignsDeleteStaged   = { fg = "#b03060", bold = true },
+          -- Inline blame text
+          GitSignsCurrentLineBlame = { fg = "#4a5568", italic = true },
+          -- Diff view (`:Gitsigns diffthis`, DiffView, etc.)
+          DiffAdd    = { bg = "#0a2a1a", fg = "none" },
+          DiffChange = { bg = "#1a1a00", fg = "none" },
+          DiffDelete = { bg = "#2a0a0f", fg = "#ff5f87" },
+          DiffText   = { bg = "#3a3000", fg = "#ffd700", bold = true },
+
           -- Visual mode
           Visual        = { bg = "#2d4a7a", fg = "#ffffff", bold = true },
           VisualNOS     = { bg = "#2d4a7a", fg = "#ffffff" },
